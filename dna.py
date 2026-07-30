@@ -15,3 +15,15 @@ def validate_sequence(sequence):
 
 def sequence_length(sequence):
     return len(sequence)
+
+def nucleotide_count(sequence):
+    counts = {
+        "A": 0,
+        "T": 0,
+        "C": 0,
+        "G": 0
+    }
+    for base in sequence:
+        counts[base] += 1
+    return counts
+
