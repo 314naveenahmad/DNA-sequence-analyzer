@@ -12,3 +12,6 @@ def validate_sequence(sequence):
         raise ValueError("Invalid DNA sequence: contains invalid bases")
 
     return sequence
+
+def sequence_length(sequence):
+    return len(sequence)
