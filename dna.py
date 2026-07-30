@@ -27,3 +27,9 @@ def nucleotide_count(sequence):
         counts[base] += 1
     return counts
 
+def gc_content(counts):
+    gc_count = counts["G"] + counts["C"]
+    total_count = sum(counts.values())
+    if total_count == 0:
+        return 0.0
+    return round((gc_count / total_count) * 100, 2)
