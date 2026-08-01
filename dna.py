@@ -47,3 +47,4 @@ def reverse_complement(sequence):
 
 def dna_to_rna_transcription(sequence : str) -> str: #supports only coding strand transcription
     return sequence.replace("T", "U")
+
