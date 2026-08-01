@@ -1,9 +1,10 @@
-from dna import validate_sequence, reverse_complement
+from dna import validate_sequence, dna_to_rna_transcription
 sequence = input("Enter a DNA sequence: ")
 try:
     validated_sequence = validate_sequence(sequence)
-    reverse_complement_sequence = reverse_complement(validated_sequence)
+    transcribed_sequnece = dna_to_rna_transcription(validated_sequence)
     print(f"validated sequence: {validated_sequence}")
-    print(f"Reverse complement: {reverse_complement_sequence}")
+    print(f"transcribed sequence: {transcribed_sequnece}")
 except ValueError as e:
     print(e)
+    

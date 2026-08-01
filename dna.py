@@ -44,3 +44,6 @@ def reverse_complement(sequence):
         "C": "G"
     }
     return "".join(complement[base] for base in reversed_sequence)
+
+def dna_to_rna_transcription(sequence : str) -> str: #supports only coding strand transcription
+    return sequence.replace("T", "U")
