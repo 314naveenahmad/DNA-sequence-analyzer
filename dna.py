@@ -28,8 +28,19 @@ def nucleotide_count(sequence):
     return counts
 
 def gc_content(counts):
+
     gc_count = counts["G"] + counts["C"]
     total_count = sum(counts.values())
     if total_count == 0:
         return 0.0
     return round((gc_count / total_count) * 100, 2)
+
+def reverse_complement(sequence):
+    reversed_sequence = sequence[::-1]
+    complement = {
+        "A": "T",
+        "T": "A",
+        "G": "C",
+        "C": "G"
+    }
+    return "".join(complement[base] for base in reversed_sequence)
